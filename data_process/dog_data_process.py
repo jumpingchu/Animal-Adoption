@@ -80,4 +80,6 @@ df['animal_Variety_converted'] = df['animal_Variety'].apply(fuzzy_match_breed)
 
 df['animal_area'] = df['animal_area_pkid'].apply(lambda x: region_dict.get(x))
 df['animal_shelter'] = df['animal_shelter_pkid'].apply(lambda x: shelter_dict.get(x))
+
+df.insert(0, "album_file", df.pop("album_file"))
 df.to_csv('./data/dog_data_transformed.csv')
