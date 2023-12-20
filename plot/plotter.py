@@ -2,7 +2,6 @@ import plotly.express as px
 import pandas as pd
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-from thefuzz import process
 
 
 class DogDataPlotter:
